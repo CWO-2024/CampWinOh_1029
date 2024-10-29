@@ -10,6 +10,9 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     // 包含 app 目錄下的所有 JavaScript、TypeScript 和 MDX 檔案
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    
+    // 排除 components 目錄下的 ignore 文件夾中的檔案
+    // "!./src/components/ignore/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     // 擴展 Tailwind CSS 的主題設置
