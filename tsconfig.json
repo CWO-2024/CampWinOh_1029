@@ -1,22 +1,61 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    // 目標語言版本
+    "target": "ES2017", // 將 TypeScript 編譯為 ES2017 版本的 JavaScript
+
+    // 需要包含的庫
+    "lib": ["dom", "dom.iterable", "esnext"], // 包含 DOM 和 ESNext 的類型定義
+
+    // 允許 JavaScript 檔案
+    "allowJs": true, // 允許編譯 JavaScript 檔案
+
+    // 跳過庫檢查
+    "skipLibCheck": true, // 跳過對所有聲明檔案的類型檢查，以加快編譯速度
+
+    // 開啟嚴格模式
+    "strict": true, // 啟用所有嚴格類型檢查選項
+
+    // 不生成輸出檔案
+    "noEmit": true, // 不生成輸出檔案（用於僅類型檢查）
+
+    // 允許使用 ES 模塊
+    "esModuleInterop": true, // 允許默認導入非 ES 模塊
+
+    // 模塊系統
+    "module": "esnext", // 使用 ESNext 模塊系統
+
+    // 模塊解析策略
+    "moduleResolution": "bundler", // 使用 bundler 模塊解析策略，適合現代工具鏈
+
+    // 解析 JSON 模塊
+    "resolveJsonModule": true, // 允許導入 JSON 檔案作為模塊
+
+    // 隔離模塊
+    "isolatedModules": true, // 每個檔案都被視為單獨的模塊，以支援 Babel 轉換
+
+    // JSX 處理方式
+    "jsx": "preserve", // 保持 JSX 語法，不進行轉換，由下游工具處理
+
+    // 增量編譯
+    "incremental": true, // 開啟增量編譯，以提高編譯速度
+
+    // 路徑別名配置
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"], // 將 @/ 映射到 ./src/ 目錄
+      "@components/*": ["./src/components/*"], // 映射 @components/ 到 ./src/components/
+      "@pages/*": ["./src/pages/*"], // 映射 @pages/ 到 ./src/pages/
+      "@store/*": ["./src/store/*"], // 映射 @store/ 到 ./src/store/
+      "@styles/*": ["./src/styles/*"], // 映射 @styles/ 到 ./src/styles/
+      "@services/*": ["./src/services/*"], // 映射 @services/ 到 ./src/services/
+      "@hooks/*": ["./src/hooks/*"], // 映射 @hooks/ 到 ./src/hooks/
+      "@utils/*": ["./src/utils/*"], // 映射 @utils/ 到 ./src/utils/
+      "@constants/*": ["./src/constants/*"], // 映射 @constants/ 到 ./src/constants/
+      "@assets/*": ["./src/assets/*"], // 映射 @assets/ 到 ./src/assets/
+      "@modules/*": ["./src/modules/*"] // 映射 @modules/ 到 ./src/modules/
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  // 包含的檔案
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"], // 包含的檔案類型
+  // 排除的檔案
+  "exclude": ["node_modules"] // 排除 node_modules 目錄
 }
